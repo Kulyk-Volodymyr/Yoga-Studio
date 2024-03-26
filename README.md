@@ -1,1 +1,1 @@
-# Yoga-Studio
+# Yoga Studio
