@@ -1,0 +1,35 @@
+.link-btn {
+  align-items: center;
+  background-color: $purple-color;
+  background-image: $gradient-2;
+  background-size: 200% 200%;
+  background-position: bottom 0% left 0%;
+  border-radius: 2rem;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  height: 3.5rem;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  text-decoration: none;
+  transition: 0.4s;
+
+  &:hover {
+    background-position: bottom 100% left 100%;
+  }
+
+  &__text {
+    @include font-poppins-medium;
+    @include font-normal;
+    color: $white-color;
+  }
+
+  &__img {
+    display: block;
+    transition: 0.4s;
+  }
+
+  &:hover &__img {
+    transform: translateX(0.5rem);
+  }
+}

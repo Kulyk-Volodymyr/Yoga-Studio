@@ -1,0 +1,37 @@
+.social {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin: auto;
+  width: fit-content;
+  @include screen-min-768 {
+    gap: 2.25rem;
+    margin: 0;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    background-color: $purple-color;
+    background-image: $gradient-2;
+    background-size: 200% 200%;
+    background-position: bottom 0% left 0%;
+    display: block;
+    height: 20px;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    -webkit-mask-position: center;
+    transition: 0.4s;
+    width: 20px;
+
+    &:hover {
+      background-position: bottom 100% left 100%;
+    }
+  }
+}

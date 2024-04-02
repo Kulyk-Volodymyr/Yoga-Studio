@@ -1,0 +1,122 @@
+// already exist:
+// _header-flex in 'header.scss'
+// _header-items-gap in 'header.scss'
+
+@mixin font-biggest() {
+  font-size: 2.25rem;
+  @include screen-min-320 {
+    font-size: 2.75rem;
+  }
+  @include screen-min-480 {
+    font-size: 3.25rem;
+  }
+  @include screen-min-768 {
+    font-size: 4.5rem;
+  }
+  @include screen-min-1024 {
+    font-size: 5.25rem;
+  }
+  @include screen-min-1280 {
+    font-size: 6rem;
+  }
+}
+
+@mixin font-bigger() {
+  font-size: 2rem;
+  @include screen-min-480 {
+    font-size: 2.5rem;
+  }
+  @include screen-min-768 {
+    font-size: 3.25rem;
+  }
+  @include screen-min-1024 {
+    font-size: 4rem;
+  }
+}
+
+@mixin font-big() {
+  font-size: 1.75rem;
+  @include screen-min-480 {
+    font-size: 2.125rem;
+  }
+  @include screen-min-768 {
+    font-size: 3rem;
+  }
+  @include screen-min-1024 {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin font-normal() {
+  font-size: 0.938rem;
+  @include screen-min-768 {
+    font-size: 1rem;
+  }
+}
+
+@mixin font-small() {
+  font-size: 0.813rem;
+  @include screen-min-768 {
+    font-size: 0.875rem;
+  }
+}
+
+@mixin font-smaller() {
+  font-size: 0.75rem;
+  @include screen-min-768 {
+    font-size: 0.813rem;
+  }
+}
+
+@mixin font-lora-regular() {
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+
+@mixin font-lora-medium() {
+  font-family: "Lora", serif;
+  font-weight: 500;
+}
+
+@mixin font-poppins-regular() {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-poppins-medium() {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+@mixin basic-padding-inline() {
+  padding-inline: 1.5rem;
+  @include screen-min-480 {
+    padding-inline: 2rem;
+  }
+  @include screen-min-768 {
+    padding-inline: 3rem;
+  }
+  @include screen-min-1024 {
+    padding-inline: 4rem;
+  }
+  @include screen-min-1280 {
+    padding-inline: 4.5rem;
+  }
+  @include screen-min-1400 {
+    padding-inline: 5rem;
+  }
+}
+
+@mixin logo() {
+  background-color: $purple-color;
+  background-image: $gradient-1;
+  font-family: "Lora", serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding: 0.25rem 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include screen-min-768 {
+    font-size: 1.5rem;
+  }
+}

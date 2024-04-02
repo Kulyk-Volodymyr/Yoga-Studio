@@ -1,0 +1,8 @@
+$gradient-1: linear-gradient(to top right, $pink-color 20%, $purple-color 80%);
+
+$gradient-2: linear-gradient(
+  to top right,
+  $pink-color 10%,
+  $purple-color 40% 60%,
+  $pink-color 90%
+);

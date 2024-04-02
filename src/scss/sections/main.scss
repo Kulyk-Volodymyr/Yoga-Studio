@@ -1,0 +1,5 @@
+.main {
+  @include basic-padding-inline;
+  background-color: var(--bodyColor);
+  overflow: hidden;
+}

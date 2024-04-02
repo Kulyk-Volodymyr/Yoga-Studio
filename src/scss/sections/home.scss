@@ -1,0 +1,316 @@
+.home {
+  margin: auto;
+  max-width: 1120px;
+  padding-block: 2.75rem;
+  @include screen-min-768 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 1.75rem;
+  }
+}
+
+.home-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  @include screen-min-768 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+    max-width: 350px;
+    text-align: left;
+  }
+  @include screen-min-1024 {
+    max-width: 420px;
+  }
+
+  &__top {
+    margin-bottom: 1.5rem;
+    margin-inline: auto;
+    position: relative;
+    width: fit-content;
+    @include screen-min-768 {
+      margin-bottom: 2rem;
+      margin-inline: 0;
+    }
+
+    &-header {
+      @include font-biggest;
+      @include font-lora-medium;
+      color: var(--titleColor);
+      line-height: 1.33;
+      margin-block: 0;
+      margin-bottom: 1.2rem;
+      position: relative;
+      @include screen-min-768 {
+        width: 600px;
+      }
+
+      &-span {
+        background-image: $gradient-1;
+        border-radius: 0.5rem;
+        color: $white-color;
+        display: inline-block;
+        padding: 0rem 0.75rem 0.25rem 0.75rem;
+        transform: translate(0.5rem, 0.5rem) rotate(10deg);
+        @include screen-min-768 {
+          border-radius: 0.75rem;
+          transform: translate(0.25rem, 0.625rem) rotate(10deg);
+        }
+        @include screen-min-1024 {
+          border-radius: 1rem;
+          transform: translate(0rem, 0.75rem) rotate(10deg);
+        }
+      }
+    }
+
+    &-paragraph {
+      @include font-normal;
+      @include font-poppins-regular;
+      color: var(--textColor);
+      line-height: 1.5;
+      margin-inline: auto;
+      max-width: 320px;
+      position: relative;
+      @include screen-min-768 {
+        margin-inline: 0;
+        max-width: 350px;
+      }
+      @include screen-min-1024 {
+        max-width: 420px;
+      }
+    }
+
+    &-decor-1 {
+      left: 0;
+      padding: 0.75rem;
+      position: absolute;
+      top: 45%;
+      @include screen-min-768 {
+        padding: 0.875rem;
+        left: 380px;
+        top: 37%;
+      }
+      @include screen-min-1024 {
+        padding: 1rem;
+        left: 420px;
+      }
+      @include screen-min-1280 {
+        left: 500px;
+      }
+
+      &-img {
+        animation: decor-1-twinkle 12s infinite linear;
+        display: block;
+        position: relative;
+        width: 30px;
+        @include screen-min-768 {
+          width: 36px;
+        }
+        @include screen-min-1024 {
+          width: auto;
+        }
+      }
+
+      &-oval {
+        border-radius: 50%;
+        border: 1px solid transparent;
+        background: $gradient-1 border-box;
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include screen-min-768 {
+          border-width: 2px;
+        }
+
+        &_first {
+          animation: decor-1-oval-first 24s infinite linear;
+          height: 30%;
+          width: 100%;
+        }
+
+        &_second {
+          animation: decor-1-oval-second 16s infinite linear;
+          height: 100%;
+          width: 30%;
+        }
+      }
+    }
+
+    &-decor-2 {
+      bottom: -1rem;
+      height: 12px;
+      left: 75%;
+      position: absolute;
+      width: 12px;
+      @include screen-min-768 {
+        bottom: 22%;
+        height: 16px;
+        left: -0.5rem;
+        width: 16px;
+      }
+      @include screen-min-1024 {
+        bottom: 15%;
+        left: -1.5rem;
+      }
+
+      &::before {
+        animation: decor-2-before 16s infinite linear;
+        border: 1px solid var(--titleColor);
+        border-radius: 50%;
+        bottom: 6px;
+        content: "";
+        height: 12px;
+        position: absolute;
+        right: 6px;
+        transform-origin: bottom right;
+        width: 12px;
+        @include screen-min-768 {
+          border-width: 2px;
+          bottom: 8px;
+          height: 16px;
+          right: 8px;
+          width: 16px;
+        }
+      }
+
+      &::after {
+        animation: decor-2-after 10s infinite ease-in-out;
+        background-image: $gradient-1;
+        border-radius: 50%;
+        bottom: 0;
+        content: "";
+        height: 100%;
+        position: absolute;
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 2.125rem;
+    @include screen-min-768 {
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    &-item {
+      text-align: center;
+    }
+
+    &-qty {
+      @include font-big;
+      @include font-lora-regular;
+      color: var(--titleColor);
+      margin-bottom: 0.375rem;
+    }
+
+    &-text {
+      @include font-small;
+      @include font-poppins-regular;
+      color: var(--titleColor);
+    }
+  }
+}
+
+.home-image {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &__img {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    @include screen-min-768 {
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes decor-1-oval-first {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1, 1);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) scale(1.1, 1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1, 1);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) scale(0.8, 1.2);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1, 1);
+  }
+}
+
+@keyframes decor-1-oval-second {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1, 1);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(90deg) scale(1.4, 0.9);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1, 1);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(270deg) scale(0.8, 1);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) scale(1, 1);
+  }
+}
+
+@keyframes decor-1-twinkle {
+  from {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes decor-2-before {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes decor-2-after {
+  from {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
